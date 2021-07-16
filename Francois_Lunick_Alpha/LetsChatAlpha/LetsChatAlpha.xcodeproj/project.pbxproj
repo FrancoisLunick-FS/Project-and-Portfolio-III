@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E047BB126A21BC0006F5034 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E047BB026A21BC0006F5034 /* ChatViewController.swift */; };
 		4E75D5E226940C770098A791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75D5E126940C770098A791 /* AppDelegate.swift */; };
 		4E75D5E426940C770098A791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75D5E326940C770098A791 /* SceneDelegate.swift */; };
 		4E75D5E626940C770098A791 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75D5E526940C770098A791 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E047BB026A21BC0006F5034 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		4E75D5DE26940C770098A791 /* LetsChatAlpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsChatAlpha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E75D5E126940C770098A791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E75D5E326940C770098A791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E047BAD26A1EC57006F5034 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E047BB026A21BC0006F5034 /* ChatViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4E047BAE26A1EC5B006F5034 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E75D5EC26940C7B0098A791 /* LaunchScreen.storyboard */,
+				4E75D5E726940C770098A791 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4E047BAF26A1EC5F006F5034 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E75D5E126940C770098A791 /* AppDelegate.swift */,
+				4E75D5E326940C770098A791 /* SceneDelegate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4E75D5D526940C770098A791 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +84,11 @@
 		4E75D5E026940C770098A791 /* LetsChatAlpha */ = {
 			isa = PBXGroup;
 			children = (
-				4E75D5E126940C770098A791 /* AppDelegate.swift */,
-				4E75D5E326940C770098A791 /* SceneDelegate.swift */,
+				4E047BAF26A1EC5F006F5034 /* Model */,
+				4E047BAE26A1EC5B006F5034 /* View */,
+				4E047BAD26A1EC57006F5034 /* Controller */,
 				4E75D5E526940C770098A791 /* ViewController.swift */,
-				4E75D5E726940C770098A791 /* Main.storyboard */,
 				4E75D5EA26940C7B0098A791 /* Assets.xcassets */,
-				4E75D5EC26940C7B0098A791 /* LaunchScreen.storyboard */,
 				4E75D5EF26940C7B0098A791 /* Info.plist */,
 			);
 			path = LetsChatAlpha;
@@ -139,6 +166,7 @@
 			files = (
 				4E75D5E626940C770098A791 /* ViewController.swift in Sources */,
 				4E75D5E226940C770098A791 /* AppDelegate.swift in Sources */,
+				4E047BB126A21BC0006F5034 /* ChatViewController.swift in Sources */,
 				4E75D5E426940C770098A791 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

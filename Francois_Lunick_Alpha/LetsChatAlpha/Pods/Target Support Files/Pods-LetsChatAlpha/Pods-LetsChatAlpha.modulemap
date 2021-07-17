@@ -1,0 +1,6 @@
+framework module Pods_LetsChatAlpha {
+  umbrella header "Pods-LetsChatAlpha-umbrella.h"
+
+  export *
+  module * { export * }
+}

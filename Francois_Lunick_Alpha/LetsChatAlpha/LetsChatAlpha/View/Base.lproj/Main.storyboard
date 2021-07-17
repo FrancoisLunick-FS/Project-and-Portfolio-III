@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MOg-G5-gtc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OUu-gc-jIW">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -84,6 +84,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-442" y="939"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="X2A-Ku-DMI">
+            <objects>
+                <viewController id="OUu-gc-jIW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mOw-GY-yZg">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lorem dolor sit amet consectetur adipisicing elit." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="iNv-wb-hfk">
+                                <rect key="frame" x="37" y="542" width="352" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FnO-jz-aPJ">
+                                <rect key="frame" x="31.666666666666664" y="669.33333333333326" width="366" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3Q-He-0r9">
+                                <rect key="frame" x="31" y="723" width="366" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="15"/>
+                                <state key="normal" title="SIGN UP WITH EMAIL">
+                                    <color key="titleColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sxA-9w-Mhj" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="h1M-Bc-a8d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxH-tA-Wmd">
+                                <rect key="frame" x="31" y="819" width="366" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="15"/>
+                                <state key="normal" title="SIGN UP WITH GOOGLE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7ZV-ZK-VJz"/>
+                        <color key="backgroundColor" red="0.73725490199999999" green="0.87843137250000003" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJc-J1-QpZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="402" y="939"/>
         </scene>
         <!--Chats-->
         <scene sceneID="jrf-T5-pFd">
@@ -188,10 +238,10 @@
             </objects>
             <point key="canvasLocation" x="402.3364485981308" y="245.57235421166308"/>
         </scene>
-        <!--View Controller-->
+        <!--Registration View Controller-->
         <scene sceneID="9v0-7T-BH0">
             <objects>
-                <viewController id="sxA-9w-Mhj" sceneMemberID="viewController">
+                <viewController id="sxA-9w-Mhj" customClass="RegistrationViewController" customModule="LetsChatAlpha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gdn-ph-Aix">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,6 +297,9 @@
                                 <state key="normal" title="SIGN UP">
                                     <color key="titleColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleNewUser:" destination="sxA-9w-Mhj" eventType="touchUpInside" id="Ymz-9h-0l3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjT-6l-dju">
                                 <rect key="frame" x="31" y="848" width="366" height="50"/>
@@ -285,6 +338,13 @@
                         <viewLayoutGuide key="safeArea" id="vkP-hV-Wk8"/>
                         <color key="backgroundColor" red="0.73725490199999999" green="0.87843137250000003" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="8cI-3z-Aq4" id="zvJ-b7-Ns5"/>
+                        <outlet property="googleSignUpButton" destination="NjT-6l-dju" id="f57-af-jIT"/>
+                        <outlet property="nameTextField" destination="Kdn-RS-6Kl" id="7zm-pi-jrc"/>
+                        <outlet property="passwordTextField" destination="QJY-8f-qYx" id="bVA-Pi-FYq"/>
+                        <outlet property="signUpButton" destination="WaH-rh-44c" id="OWm-9M-aJX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sor-Xa-HOJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

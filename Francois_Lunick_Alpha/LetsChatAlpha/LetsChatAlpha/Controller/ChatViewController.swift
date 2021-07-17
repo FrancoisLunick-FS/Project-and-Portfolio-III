@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class ChatViewController: UIViewController {
 
@@ -17,6 +19,7 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
 
         configureUI()
+        authenticateUser()
         
     }
     
@@ -38,9 +41,38 @@ class ChatViewController: UIViewController {
         
     }
     
+    func presentLoginScreen() {
+        DispatchQueue.main.async {
+            let controller = LoginViewController()
+            let nav = UINavigationController(rootViewController: controller)
+            nav.modalPresentationStyle = .fullScreen
+            
+            self.present(nav, animated: true, completion: nil)
+        }
+    }
+    
+    // MARK: - API
+    func authenticateUser() {
+        
+        if Auth.auth().currentUser?.uid == nil {
+            presentLoginScreen()
+        } else {
+            print("DEBUG: User is logged in. Configure Controller...")
+        }
+    }
+    
+    func logout() {
+        do {
+            try Auth.auth().signOut()
+            
+        } catch {
+            print("DEBUG: Error signing out..")
+        }
+    }
+    
     // MARK: - Actions
     @IBAction func presentNewMessage(_ sender: UIBarButtonItem) {
-        
+        logout()
     }
     
 }

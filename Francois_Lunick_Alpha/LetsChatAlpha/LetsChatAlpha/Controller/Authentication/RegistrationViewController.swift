@@ -7,6 +7,8 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 
 class RegistrationViewController: UIViewController {
 
@@ -29,11 +31,35 @@ class RegistrationViewController: UIViewController {
     // MARK: - Actions
     @IBAction func handleNewUser(_ sender: UIButton) {
         
-        guard let name = nameTextField.text,
+        guard let name = nameTextField.text?.lowercased(),
               let email = emailTextField.text,
               let password = passwordTextField.text else { return }
         
-        
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            
+            if let error = error {
+                
+                print("DEBUG: Failed to create user with error \(error.localizedDescription)")
+                return
+            }
+            
+            guard let uid = result?.user.uid else { return }
+            
+            let data = [ "name": name,
+                         "email": email,
+                         "uid": uid,
+                         "password": password] as [String: Any]
+            
+            Firestore.firestore().collection("users").document(uid).setData(data) { error in
+                if let error = error {
+                    
+                    print("DEBUG: Failed to upload user data with error \(error.localizedDescription)")
+                    return
+                }
+                
+                print("DEBUG: Did create user...")
+            }
+        }
     }
     
 

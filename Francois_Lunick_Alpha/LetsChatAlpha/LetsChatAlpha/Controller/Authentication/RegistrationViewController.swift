@@ -35,42 +35,51 @@ class RegistrationViewController: UIViewController {
               let email = emailTextField.text,
               let password = passwordTextField.text else { return }
         
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            
+        let credentials = RegistrationCredentials(name: name, email: email, password: password)
+        
+        showLoader(true, withText: "Signing In")
+        
+        AuthService.shared.createUser(credentials: credentials) { error in
             if let error = error {
                 
-                print("DEBUG: Failed to create user with error \(error.localizedDescription)")
+                print("DEBUG: Failed to upload user data with error \(error.localizedDescription)")
+                
+                self.showLoader(false)
                 return
             }
             
-            guard let uid = result?.user.uid else { return }
-            
-            let data = [ "name": name,
-                         "email": email,
-                         "uid": uid,
-                         "password": password] as [String: Any]
-            
-            Firestore.firestore().collection("users").document(uid).setData(data) { error in
-                if let error = error {
-                    
-                    print("DEBUG: Failed to upload user data with error \(error.localizedDescription)")
-                    return
-                }
-                
-                print("DEBUG: Did create user...")
+            self.showLoader(false)
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "NewUserToChat", sender: self)
             }
         }
+        
+//        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+//            
+//            if let error = error {
+//                
+//                print("DEBUG: Failed to create user with error \(error.localizedDescription)")
+//                return
+//            }
+//            
+//            guard let uid = result?.user.uid else { return }
+//            
+//            let data = [ "name": name,
+//                         "email": email,
+//                         "uid": uid,
+//                         "password": password] as [String: Any]
+//            
+//            Firestore.firestore().collection("users").document(uid).setData(data) { error in
+//                if let error = error {
+//                    
+//                    print("DEBUG: Failed to upload user data with error \(error.localizedDescription)")
+//                    return
+//                }
+//                
+//                DispatchQueue.main.async {
+//                    self.performSegue(withIdentifier: "NewUserToChat", sender: self)
+//                }
+//            }
+//        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

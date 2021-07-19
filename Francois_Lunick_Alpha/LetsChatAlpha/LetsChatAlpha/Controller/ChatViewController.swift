@@ -23,6 +23,12 @@ class ChatViewController: UIViewController {
         
     }
     
+//    override func viewWillDisappear(_ animated: Bool) {
+//        self.dismiss(animated: true) {
+//            super.viewWillDisappear(true)
+//        }
+//    }
+    
     // MARK: - Helpers
     func configureUI() {
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -42,12 +48,25 @@ class ChatViewController: UIViewController {
     }
     
     func presentLoginScreen() {
+//        DispatchQueue.main.async {
+//            let controller = LoginViewController()
+//            let nav = UINavigationController(rootViewController: controller)
+//            //self.definesPresentationContext = true
+//            nav.modalPresentationStyle = .fullScreen
+//
+//            //let appDelegate = UIApplication.shared.delegate as? AppDelegate
+//            //appDelegate?.window?.rootViewController?.present(nav, animated: true, completion: nil)
+//            self.present(nav, animated: true, completion: nil)
+//
+////            let viewController = LoginViewController().children.first
+////            viewController?.modalPresentationStyle = .fullScreen
+////            viewController?.modalTransitionStyle = .coverVertical
+////            viewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+//
+//        }
+        
         DispatchQueue.main.async {
-            let controller = LoginViewController()
-            let nav = UINavigationController(rootViewController: controller)
-            nav.modalPresentationStyle = .fullScreen
-            
-            self.present(nav, animated: true, completion: nil)
+            self.performSegue(withIdentifier: "ToSignUpSplash", sender: self)
         }
     }
     
@@ -64,7 +83,7 @@ class ChatViewController: UIViewController {
     func logout() {
         do {
             try Auth.auth().signOut()
-            
+            presentLoginScreen()
         } catch {
             print("DEBUG: Error signing out..")
         }
@@ -72,6 +91,9 @@ class ChatViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func presentNewMessage(_ sender: UIBarButtonItem) {
+        
+    }
+    @IBAction func exitScreen(_ sender: UIBarButtonItem) {
         logout()
     }
     

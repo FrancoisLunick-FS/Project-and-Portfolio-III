@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,9 @@
 		4E047BB626A22C41006F5034 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E047BB526A22C41006F5034 /* RegistrationViewController.swift */; };
 		4E047BB826A22CAC006F5034 /* SignInSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E047BB726A22CAC006F5034 /* SignInSplashViewController.swift */; };
 		4E047BBA26A28B1A006F5034 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E047BB926A28B1A006F5034 /* GoogleService-Info.plist */; };
+		4E047BBC26A38AE0006F5034 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E047BBB26A38AE0006F5034 /* FriendsViewController.swift */; };
+		4E047BBF26A530EB006F5034 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E047BBE26A530EB006F5034 /* AuthService.swift */; };
+		4E1C5E2326A551F20055ABA3 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1C5E2226A551F20055ABA3 /* Extension.swift */; };
 		4E75D5E226940C770098A791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75D5E126940C770098A791 /* AppDelegate.swift */; };
 		4E75D5E426940C770098A791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75D5E326940C770098A791 /* SceneDelegate.swift */; };
 		4E75D5E626940C770098A791 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75D5E526940C770098A791 /* ViewController.swift */; };
@@ -28,6 +31,9 @@
 		4E047BB526A22C41006F5034 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		4E047BB726A22CAC006F5034 /* SignInSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSplashViewController.swift; sourceTree = "<group>"; };
 		4E047BB926A28B1A006F5034 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4E047BBB26A38AE0006F5034 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		4E047BBE26A530EB006F5034 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		4E1C5E2226A551F20055ABA3 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		4E75D5DE26940C770098A791 /* LetsChatAlpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsChatAlpha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E75D5E126940C770098A791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E75D5E326940C770098A791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +64,7 @@
 				4E047BB226A22BF5006F5034 /* Authentication */,
 				4E047BB026A21BC0006F5034 /* ChatViewController.swift */,
 				4E047BB726A22CAC006F5034 /* SignInSplashViewController.swift */,
+				4E047BBB26A38AE0006F5034 /* FriendsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -89,6 +96,22 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		4E047BBD26A5300F006F5034 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4E047BBE26A530EB006F5034 /* AuthService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		4E1C5E2126A550790055ABA3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4E1C5E2226A551F20055ABA3 /* Extension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		4E75D5D526940C770098A791 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +136,8 @@
 				4E047BAF26A1EC5F006F5034 /* Model */,
 				4E047BAE26A1EC5B006F5034 /* View */,
 				4E047BAD26A1EC57006F5034 /* Controller */,
+				4E047BBD26A5300F006F5034 /* API */,
+				4E1C5E2126A550790055ABA3 /* Utilities */,
 				4E75D5E526940C770098A791 /* ViewController.swift */,
 				4E75D5EA26940C7B0098A791 /* Assets.xcassets */,
 				4E75D5EF26940C7B0098A791 /* Info.plist */,
@@ -127,7 +152,6 @@
 				5568E82BC64661AD8A4F5F84 /* Pods-LetsChatAlpha.debug.xcconfig */,
 				ECFF390149C0A92E34031713 /* Pods-LetsChatAlpha.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -150,7 +174,7 @@
 				4E75D5DA26940C770098A791 /* Sources */,
 				4E75D5DB26940C770098A791 /* Frameworks */,
 				4E75D5DC26940C770098A791 /* Resources */,
-				A3556A58543360AE3595EF20 /* [CP] Embed Pods Frameworks */,
+				C70A3B3DDD75FD2F107F97F7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,7 +232,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A3556A58543360AE3595EF20 /* [CP] Embed Pods Frameworks */ = {
+		C70A3B3DDD75FD2F107F97F7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,9 +278,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E047BBC26A38AE0006F5034 /* FriendsViewController.swift in Sources */,
 				4E047BB826A22CAC006F5034 /* SignInSplashViewController.swift in Sources */,
 				4E047BB626A22C41006F5034 /* RegistrationViewController.swift in Sources */,
+				4E047BBF26A530EB006F5034 /* AuthService.swift in Sources */,
 				4E75D5E626940C770098A791 /* ViewController.swift in Sources */,
+				4E1C5E2326A551F20055ABA3 /* Extension.swift in Sources */,
 				4E75D5E226940C770098A791 /* AppDelegate.swift in Sources */,
 				4E047BB126A21BC0006F5034 /* ChatViewController.swift in Sources */,
 				4E047BB426A22C1A006F5034 /* LoginViewController.swift in Sources */,

@@ -17,6 +17,8 @@ class ChatViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //NewMessageViewController().delegate = self
 
         configureUI()
         authenticateUser()
@@ -92,7 +94,9 @@ class ChatViewController: UIViewController {
     // MARK: - Actions
     @IBAction func presentNewMessage(_ sender: UIBarButtonItem) {
         
+        performSegue(withIdentifier: "ToNewMessage", sender: self)
     }
+    
     @IBAction func exitScreen(_ sender: UIBarButtonItem) {
         logout()
     }
@@ -119,4 +123,14 @@ extension ChatViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension ChatViewController: UITableViewDelegate {
     
+}
+
+// MARK: - NewMessageControllerDelegate
+extension ChatViewController: NewMessageControllerDelegate {
+    
+    func controller(_ controller: NewMessageViewController, user: User) {
+        
+        print("DEBUG: \(user.name)")
+        //controller.dismiss(animated: true, completion: nil)
+    }
 }

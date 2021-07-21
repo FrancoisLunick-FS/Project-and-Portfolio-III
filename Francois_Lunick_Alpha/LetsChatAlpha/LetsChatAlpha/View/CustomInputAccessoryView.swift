@@ -10,6 +10,23 @@ import UIKit
 class CustomInputAccessoryView: UIView {
 
     // MARK: - Properties
+    private let messageInputTextView: UITextView = {
+        let textView = UITextView()
+        textView.font = UIFont.systemFont(ofSize: 16)
+        textView.isScrollEnabled = false
+        
+        return textView
+    }()
+    
+    private let sendButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Send", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.setTitleColor(.systemPurple, for: .normal)
+        button.addTarget(self, action: #selector(handleSendMessage), for: .touchUpInside)
+        
+        return button
+    }()
     
     // MARK: - View Life Cycle
     override init(frame: CGRect) {
@@ -18,6 +35,9 @@ class CustomInputAccessoryView: UIView {
         backgroundColor = .red
         
         autoresizingMask = .flexibleHeight
+        
+        addSubview(sendButton)
+        
     }
     
     required init?(coder: NSCoder) {
@@ -26,6 +46,11 @@ class CustomInputAccessoryView: UIView {
     
     override var intrinsicContentSize: CGSize {
         return .zero
+    }
+    
+    // MARK: - Selector
+    @objc func handleSendMessage() {
+        
     }
     
     /*

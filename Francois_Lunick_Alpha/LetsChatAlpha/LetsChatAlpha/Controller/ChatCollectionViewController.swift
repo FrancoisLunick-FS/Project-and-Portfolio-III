@@ -14,9 +14,11 @@ class ChatCollectionViewController: UICollectionViewController {
     // MARK: - Properties
     var user: User!
     
-    private let inputView: CustomInputAccessoryView = {
-        let iv = CustomInputAccessoryView(frame: <#T##CGRect#>)
-    }
+    private lazy var customInputView: CustomInputAccessoryView = {
+        let iv = CustomInputAccessoryView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 50))
+        
+        return iv
+    }()
 
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -36,6 +38,10 @@ class ChatCollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
         
         collectionView.backgroundColor = .white
+    }
+    
+    override var inputAccessoryView: UIView? {
+        get { return customInputView }
     }
 
     

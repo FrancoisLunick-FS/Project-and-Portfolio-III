@@ -12,7 +12,11 @@ private let reuseIdentifier = "Cell"
 class ChatCollectionViewController: UICollectionViewController {
     
     // MARK: - Properties
-    //private let user: User
+    var user: User!
+    
+    private let inputView: CustomInputAccessoryView = {
+        let iv = CustomInputAccessoryView(frame: <#T##CGRect#>)
+    }
 
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -20,6 +24,11 @@ class ChatCollectionViewController: UICollectionViewController {
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
+        
+        print(user.name)
+        navigationController?.title = user.name
+        navigationController?.navigationBar.tintColor = .black
+        
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
@@ -28,6 +37,7 @@ class ChatCollectionViewController: UICollectionViewController {
         
         collectionView.backgroundColor = .white
     }
+
     
 //    init(user: User) {
 //        self.user = user

@@ -18,7 +18,7 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //NewMessageViewController().delegate = self
+//        NewMessageViewController().delegate = self
 
         configureUI()
         authenticateUser()
@@ -94,6 +94,11 @@ class ChatViewController: UIViewController {
     // MARK: - Actions
     @IBAction func presentNewMessage(_ sender: UIBarButtonItem) {
         
+//        let controller = NewMessageViewController()
+//        let nav = UINavigationController(rootViewController: controller)
+//        nav.modalPresentationStyle = .fullScreen
+//        present(nav, animated: true, completion: nil)
+        
         performSegue(withIdentifier: "ToNewMessage", sender: self)
     }
     
@@ -129,6 +134,8 @@ extension ChatViewController: UITableViewDelegate {
 extension ChatViewController: NewMessageControllerDelegate {
     
     func controller(_ controller: NewMessageViewController, user: User) {
+        
+        //controller.delegate = self
         
         print("DEBUG: \(user.name)")
         //controller.dismiss(animated: true, completion: nil)

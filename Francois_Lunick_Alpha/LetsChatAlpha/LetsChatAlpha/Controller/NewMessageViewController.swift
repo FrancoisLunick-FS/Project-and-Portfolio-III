@@ -80,11 +80,21 @@ extension NewMessageViewController: UITableViewDataSource {
 extension NewMessageViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.dismiss(animated: true, completion: nil)
+        //self.dismiss(animated: true, completion: nil)
         
         //let user: User
         //let chat = ChatCollectionViewController(user: user)
         
-        navigationController?.pushViewController(ChatCollectionViewController(), animated: true)
+        //navigationController?.pushViewController(ChatCollectionViewController(), animated: true)
+        
+        guard let chat = self.storyboard?.instantiateViewController(identifier: "ChatController") as? ChatCollectionViewController else {
+            return
+        }
+        chat.user = users[indexPath.row]
+        self.present(chat, animated: true, completion: nil)
+        
+        
+        
+        //delegate?.controller(self, user: users[indexPath.row])
     }
 }

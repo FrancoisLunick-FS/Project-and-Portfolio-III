@@ -21,6 +21,7 @@
 		4E1C5E2B26A5FCE40055ABA3 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1C5E2A26A5FCE40055ABA3 /* Service.swift */; };
 		4E1C5E2D26A61C140055ABA3 /* ChatCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1C5E2C26A61C140055ABA3 /* ChatCollectionViewController.swift */; };
 		4E1C5E2F26A61F2E0055ABA3 /* NewMessageControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1C5E2E26A61F2E0055ABA3 /* NewMessageControllerDelegate.swift */; };
+		4E1C5E3126A888EB0055ABA3 /* CustomInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1C5E3026A888EB0055ABA3 /* CustomInputAccessoryView.swift */; };
 		4E75D5E226940C770098A791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75D5E126940C770098A791 /* AppDelegate.swift */; };
 		4E75D5E426940C770098A791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75D5E326940C770098A791 /* SceneDelegate.swift */; };
 		4E75D5E626940C770098A791 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75D5E526940C770098A791 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 		4E1C5E2A26A5FCE40055ABA3 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		4E1C5E2C26A61C140055ABA3 /* ChatCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewController.swift; sourceTree = "<group>"; };
 		4E1C5E2E26A61F2E0055ABA3 /* NewMessageControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageControllerDelegate.swift; sourceTree = "<group>"; };
+		4E1C5E3026A888EB0055ABA3 /* CustomInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputAccessoryView.swift; sourceTree = "<group>"; };
 		4E75D5DE26940C770098A791 /* LetsChatAlpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsChatAlpha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E75D5E126940C770098A791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E75D5E326940C770098A791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				4E75D5EC26940C7B0098A791 /* LaunchScreen.storyboard */,
 				4E75D5E726940C770098A791 /* Main.storyboard */,
 				4E1C5E2626A5FA800055ABA3 /* UserTableViewCell.swift */,
+				4E1C5E3026A888EB0055ABA3 /* CustomInputAccessoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				4E047BBC26A38AE0006F5034 /* FriendsViewController.swift in Sources */,
 				4E047BB826A22CAC006F5034 /* SignInSplashViewController.swift in Sources */,
 				4E047BB626A22C41006F5034 /* RegistrationViewController.swift in Sources */,
+				4E1C5E3126A888EB0055ABA3 /* CustomInputAccessoryView.swift in Sources */,
 				4E047BBF26A530EB006F5034 /* AuthService.swift in Sources */,
 				4E1C5E2726A5FA800055ABA3 /* UserTableViewCell.swift in Sources */,
 				4E1C5E2F26A61F2E0055ABA3 /* NewMessageControllerDelegate.swift in Sources */,

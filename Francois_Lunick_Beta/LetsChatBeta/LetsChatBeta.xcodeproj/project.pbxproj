@@ -59,6 +59,18 @@
 		4E1C5E5826A9A15A0055ABA3 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		4E1C5E5A26A9A15A0055ABA3 /* MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		4E1C5E7126A9A4140055ABA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4E1C5E7426A9A8910055ABA3 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		4E1C5E7526A9A8910055ABA3 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		4E1C5E7626A9A8910055ABA3 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		4E1C5E7726A9A8920055ABA3 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		4E1C5E7826A9A8920055ABA3 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		4E1C5E7926A9A8920055ABA3 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		4E1C5E7A26A9A8930055ABA3 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		4E1C5E7B26A9A8930055ABA3 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		4E1C5E7C26A9A8930055ABA3 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		4E1C5E7D26A9A8940055ABA3 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		4E1C5E7E26A9A8940055ABA3 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		4E1C5E7F26A9A8940055ABA3 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		4E75D5FE26940D7D0098A791 /* LetsChatBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsChatBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E75D60A26940D7F0098A791 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E75D60F26940D7F0098A791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -165,6 +177,25 @@
 			path = ../../../Francois_Lunick_Alpha/LetsChatAlpha/LetsChatAlpha/ViewModel;
 			sourceTree = "<group>";
 		};
+		4E1C5E7326A9A8670055ABA3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4E1C5E7B26A9A8930055ABA3 /* Roboto-Black.ttf */,
+				4E1C5E7D26A9A8940055ABA3 /* Roboto-BlackItalic.ttf */,
+				4E1C5E7926A9A8920055ABA3 /* Roboto-Bold.ttf */,
+				4E1C5E7C26A9A8930055ABA3 /* Roboto-BoldItalic.ttf */,
+				4E1C5E7A26A9A8930055ABA3 /* Roboto-Italic.ttf */,
+				4E1C5E7426A9A8910055ABA3 /* Roboto-Light.ttf */,
+				4E1C5E7626A9A8910055ABA3 /* Roboto-LightItalic.ttf */,
+				4E1C5E7E26A9A8940055ABA3 /* Roboto-Medium.ttf */,
+				4E1C5E7726A9A8920055ABA3 /* Roboto-MediumItalic.ttf */,
+				4E1C5E7F26A9A8940055ABA3 /* Roboto-Regular.ttf */,
+				4E1C5E7826A9A8920055ABA3 /* Roboto-Thin.ttf */,
+				4E1C5E7526A9A8910055ABA3 /* Roboto-ThinItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		4E75D5F526940D7D0098A791 = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +223,7 @@
 				4E1C5E4526A9A15A0055ABA3 /* Controller */,
 				4E1C5E3C26A9A15A0055ABA3 /* API */,
 				4E1C5E4E26A9A15A0055ABA3 /* Utilities */,
+				4E1C5E7326A9A8670055ABA3 /* Fonts */,
 				4E75D60A26940D7F0098A791 /* Assets.xcassets */,
 				4E75D60F26940D7F0098A791 /* Info.plist */,
 				4E1C5E7126A9A4140055ABA3 /* GoogleService-Info.plist */,

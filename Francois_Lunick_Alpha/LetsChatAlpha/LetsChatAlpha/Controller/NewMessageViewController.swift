@@ -87,10 +87,15 @@ extension NewMessageViewController: UITableViewDelegate {
         
         //navigationController?.pushViewController(ChatCollectionViewController(), animated: true)
         
-        guard let chat = self.storyboard?.instantiateViewController(identifier: "ChatController") as? ChatCollectionViewController else {
+        guard let chat = self.storyboard?.instantiateViewController(identifier: "ChatNav") as? UINavigationController else {
             return
         }
-        chat.user = users[indexPath.row]
+        
+        guard let collectionView = chat.viewControllers.first as? ChatCollectionViewController else {
+            return
+        }
+        
+        collectionView.user = users[indexPath.row]
         self.present(chat, animated: true, completion: nil)
         
         //delegate?.controller(self, user: users[indexPath.row])

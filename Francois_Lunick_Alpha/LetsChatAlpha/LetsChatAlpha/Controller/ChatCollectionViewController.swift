@@ -80,8 +80,13 @@ class ChatCollectionViewController: UICollectionViewController {
 //        fatalError("init(coder:) has not been implemented")
 //    }
     
+    // MARK: - Actions
+    @IBAction func dismissView(_ sender: UIBarButtonItem) {
+        
+        dismiss(animated: true, completion: nil)
+    }
     
-
+    
     // MARK: - UICollectionViewDelegate
 
     /*

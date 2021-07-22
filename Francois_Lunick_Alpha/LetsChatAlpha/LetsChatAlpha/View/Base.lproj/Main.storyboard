@@ -30,7 +30,7 @@
         <!--Friends-->
         <scene sceneID="N6i-9I-Mny">
             <objects>
-                <viewController id="r4M-pW-u1p" customClass="FriendsViewController" customModule="LetsChatAlpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="r4M-pW-u1p" customClass="FriendsViewController" customModule="LetsChatBeta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lnW-Qr-dqu">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,7 @@
         <!--New Message View Controller-->
         <scene sceneID="UZ3-m1-bBI">
             <objects>
-                <viewController id="ttG-B2-xUA" customClass="NewMessageViewController" customModule="LetsChatAlpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ttG-B2-xUA" customClass="NewMessageViewController" customModule="LetsChatBeta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Xf-12-KCm">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,7 +55,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell_id01" rowHeight="80" id="FBh-i0-QMP" customClass="UserTableViewCell" customModule="LetsChatAlpha" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell_id01" rowHeight="80" id="FBh-i0-QMP" customClass="UserTableViewCell" customModule="LetsChatBeta" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FBh-i0-QMP" id="K8f-8g-jUT">
@@ -113,7 +113,7 @@
         <!--Chat Collection View Controller-->
         <scene sceneID="GDa-GF-18S">
             <objects>
-                <collectionViewController storyboardIdentifier="ChatController" modalPresentationStyle="fullScreen" id="nQC-S2-0vZ" customClass="ChatCollectionViewController" customModule="LetsChatAlpha" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="ChatController" modalPresentationStyle="fullScreen" id="nQC-S2-0vZ" customClass="ChatCollectionViewController" customModule="LetsChatBeta" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="D9m-5D-JIz">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,7 +140,11 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="Z0P-D0-q3A">
-                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="bmP-SO-BvV"/>
+                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="bmP-SO-BvV">
+                            <connections>
+                                <action selector="dismissView:" destination="nQC-S2-0vZ" id="Adt-Pc-mRS"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem title="Item" image="video.fill" catalog="system" id="aYd-WD-QLC"/>
                             <barButtonItem image="phone.fill" catalog="system" id="00A-CD-hUs"/>
@@ -154,7 +158,7 @@
         <!--Chat View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ChatViewController" customModule="LetsChatAlpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ChatViewController" customModule="LetsChatBeta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -303,7 +307,7 @@
         <!--Login View Controller-->
         <scene sceneID="apx-s5-amQ">
             <objects>
-                <viewController id="MOg-G5-gtc" customClass="LoginViewController" customModule="LetsChatAlpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MOg-G5-gtc" customClass="LoginViewController" customModule="LetsChatBeta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w8V-gS-i3x">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -393,7 +397,7 @@
         <!--Registration View Controller-->
         <scene sceneID="9v0-7T-BH0">
             <objects>
-                <viewController id="sxA-9w-Mhj" customClass="RegistrationViewController" customModule="LetsChatAlpha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sxA-9w-Mhj" customClass="RegistrationViewController" customModule="LetsChatBeta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gdn-ph-Aix">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -524,7 +528,7 @@
         <!--Navigation Controller-->
         <scene sceneID="oNQ-we-JDv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X50-X5-3Ju" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ChatNav" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="X50-X5-3Ju" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rap-MO-HuN">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>

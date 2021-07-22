@@ -73,6 +73,10 @@ class ChatViewController: UIViewController {
     }
     
     // MARK: - API
+    func fetchConversations() {
+        
+    }
+    
     func authenticateUser() {
         
         if Auth.auth().currentUser?.uid == nil {

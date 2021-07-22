@@ -43,6 +43,8 @@ class ChatCollectionViewController: UICollectionViewController {
         
         collectionView.backgroundColor = .white
         collectionView.alwaysBounceVertical = true
+        
+        fetchMessages()
     }
     
     override var inputAccessoryView: UIView? {
@@ -52,6 +54,15 @@ class ChatCollectionViewController: UICollectionViewController {
     override var canBecomeFirstResponder: Bool {
         
         return true
+    }
+    
+    // MARK: - API
+    func fetchMessages() {
+        Service.fetchMessages(forUser: user) { messages in
+            self.messages = messages
+            
+            self.collectionView.reloadData()
+        }
     }
     
 //    init(user: User) {
@@ -118,6 +129,8 @@ extension ChatCollectionViewController {
         }
         
         // Configure the cell
+        cell.message = messages[indexPath.row]
+        cell.message?.user = user
         
         return cell
     }
@@ -133,7 +146,15 @@ extension ChatCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: view.frame.width, height: 50)
+        let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
+        let estimatedSizeCell = MessageCollectionViewCell(frame: frame)
+        estimatedSizeCell.message = messages[indexPath.row]
+        estimatedSizeCell.layoutIfNeeded()
+        
+        let targetSize = CGSize(width: view.frame.width, height: 1000)
+        let estimatedSize = estimatedSizeCell.systemLayoutSizeFitting(targetSize)
+        
+        return .init(width: view.frame.width, height: estimatedSize.height)
     }
 }
 
@@ -141,12 +162,21 @@ extension ChatCollectionViewController: CustomInputAccessoryViewDelegate {
     
     func inputView(_ inputView: CustomInputAccessoryView, wantsToSend message: String) {
         
-        inputView.messageInputTextView.text = nil
+        Service.uploadMessage(message, to: user) { error in
+            
+            if let error = error {
+                print("DEBUG: Failed to upload message with error \(error.localizedDescription)")
+                
+                return
+            }
+            
+            inputView.clearMessageText()
+        }
         
-        fromCurrentUser.toggle()
+        //fromCurrentUser.toggle()
         
-        let message = Message(text: message, isCurrentUser: fromCurrentUser)
-        messages.append(message)
-        collectionView.reloadData()
+//        let message = Message(text: message, isCurrentUser: fromCurrentUser)
+//        messages.append(message)
+        //collectionView.reloadData()
     }
 }

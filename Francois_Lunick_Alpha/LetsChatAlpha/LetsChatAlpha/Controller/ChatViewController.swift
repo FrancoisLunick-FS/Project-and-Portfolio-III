@@ -9,10 +9,14 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
+private let reuseIdentifier = "cell_id00"
+
 class ChatViewController: UIViewController {
 
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
+    
+    private var conversations = [Conversation]()
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -74,7 +78,11 @@ class ChatViewController: UIViewController {
     
     // MARK: - API
     func fetchConversations() {
-        
+        Service.fetchConversations { conversations in
+            
+            self.conversations = conversations
+            self.tableView.reloadData()
+        }
     }
     
     func authenticateUser() {
@@ -116,7 +124,7 @@ class ChatViewController: UIViewController {
 extension ChatViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return conversations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

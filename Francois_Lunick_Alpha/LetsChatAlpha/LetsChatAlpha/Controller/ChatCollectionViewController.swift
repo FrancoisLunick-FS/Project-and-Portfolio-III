@@ -7,15 +7,19 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "ChatCell"
 
 class ChatCollectionViewController: UICollectionViewController {
     
     // MARK: - Properties
     var user: User!
+    private var messages = [Message]()
+    var fromCurrentUser = false
     
     private lazy var customInputView: CustomInputAccessoryView = {
         let iv = CustomInputAccessoryView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 50))
+        
+        iv.delegate = self
         
         return iv
     }()
@@ -27,17 +31,18 @@ class ChatCollectionViewController: UICollectionViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
-        print(user.name)
-        navigationController?.title = user.name
+        //print(user.name)
+        //navigationController?.title = user.name
         navigationController?.navigationBar.tintColor = .black
         
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(MessageCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
         
         collectionView.backgroundColor = .white
+        collectionView.alwaysBounceVertical = true
     }
     
     override var inputAccessoryView: UIView? {
@@ -58,26 +63,7 @@ class ChatCollectionViewController: UICollectionViewController {
 //        fatalError("init(coder:) has not been implemented")
 //    }
     
-    // MARK: - UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
-        // Configure the cell
-    
-        return cell
-    }
 
     // MARK: - UICollectionViewDelegate
 
@@ -110,4 +96,57 @@ class ChatCollectionViewController: UICollectionViewController {
     }
     */
 
+}
+
+// MARK: - UICollectionViewDataSource
+extension ChatCollectionViewController {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+    
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of items
+        return messages.count
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? MessageCollectionViewCell else {
+            
+            return collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        }
+        
+        // Configure the cell
+        
+        return cell
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension ChatCollectionViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return .init(top: 16, left: 0, bottom: 16, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: view.frame.width, height: 50)
+    }
+}
+
+extension ChatCollectionViewController: CustomInputAccessoryViewDelegate {
+    
+    func inputView(_ inputView: CustomInputAccessoryView, wantsToSend message: String) {
+        
+        inputView.messageInputTextView.text = nil
+        
+        fromCurrentUser.toggle()
+        
+        let message = Message(text: message, isCurrentUser: fromCurrentUser)
+        messages.append(message)
+        collectionView.reloadData()
+    }
 }

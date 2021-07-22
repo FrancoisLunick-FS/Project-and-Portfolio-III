@@ -44,6 +44,10 @@ class ChatCollectionViewController: UICollectionViewController {
         get { return customInputView }
     }
 
+    override var canBecomeFirstResponder: Bool {
+        
+        return true
+    }
     
 //    init(user: User) {
 //        self.user = user

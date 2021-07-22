@@ -26,6 +26,7 @@ class ChatViewController: UIViewController {
 
         configureUI()
         authenticateUser()
+        fetchConversations()
         
     }
     
@@ -129,7 +130,11 @@ extension ChatViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell_id00", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        
+        cell.textLabel?.text = conversations[indexPath.row].message.text
+        
+        //cell.textLabel?.text = "text"
         
         return cell
     }

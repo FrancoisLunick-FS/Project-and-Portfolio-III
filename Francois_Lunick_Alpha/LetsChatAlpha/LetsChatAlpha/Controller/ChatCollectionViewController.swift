@@ -31,9 +31,13 @@ class ChatCollectionViewController: UICollectionViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
+//        let chatNavigationController = UINavigationController(rootViewController: ChatCollectionViewController)
+        
         //print(user.name)
-        //navigationController?.title = user.name
+        navigationController?.title = user.name
         navigationController?.navigationBar.tintColor = .black
+        //navigationController?.navigationBar.isTranslucent = true
+        //navigationController?.navigationBar.prefersLargeTitles = true
         
 
         // Register cell classes

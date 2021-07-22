@@ -93,8 +93,6 @@ extension NewMessageViewController: UITableViewDelegate {
         chat.user = users[indexPath.row]
         self.present(chat, animated: true, completion: nil)
         
-        
-        
         //delegate?.controller(self, user: users[indexPath.row])
     }
 }

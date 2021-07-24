@@ -17,6 +17,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var conversations = [Conversation]()
+    private var users = [User]()
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -144,6 +145,20 @@ extension ChatViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension ChatViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let chat = self.storyboard?.instantiateViewController(identifier: "ChatNav") as? UINavigationController else {
+            return
+        }
+        
+        guard let collectionView = chat.viewControllers.first as? ChatCollectionViewController else {
+            return
+        }
+        
+        collectionView.user = conversations[indexPath.row].user
+        self.present(chat, animated: true, completion: nil)
+    }
     
 }
 

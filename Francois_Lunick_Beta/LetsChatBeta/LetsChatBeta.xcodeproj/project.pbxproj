@@ -31,6 +31,7 @@
 		4E1C5E6F26A9A15A0055ABA3 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1C5E5826A9A15A0055ABA3 /* UserTableViewCell.swift */; };
 		4E1C5E7026A9A15A0055ABA3 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1C5E5A26A9A15A0055ABA3 /* MessageViewModel.swift */; };
 		4E1C5E7226A9A4140055ABA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E1C5E7126A9A4140055ABA3 /* GoogleService-Info.plist */; };
+		4E1C5EA826AA17DA0055ABA3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1C5EA726AA17DA0055ABA3 /* ProfileViewController.swift */; };
 		4E75D60B26940D7F0098A791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E75D60A26940D7F0098A791 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -59,21 +60,9 @@
 		4E1C5E5826A9A15A0055ABA3 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		4E1C5E5A26A9A15A0055ABA3 /* MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		4E1C5E7126A9A4140055ABA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		4E1C5E7426A9A8910055ABA3 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
-		4E1C5E7526A9A8910055ABA3 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
-		4E1C5E7626A9A8910055ABA3 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
-		4E1C5E7726A9A8920055ABA3 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
-		4E1C5E7826A9A8920055ABA3 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
-		4E1C5E7926A9A8920055ABA3 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
-		4E1C5E7A26A9A8930055ABA3 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
-		4E1C5E7B26A9A8930055ABA3 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
-		4E1C5E7C26A9A8930055ABA3 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
-		4E1C5E7D26A9A8940055ABA3 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
-		4E1C5E7E26A9A8940055ABA3 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
-		4E1C5E7F26A9A8940055ABA3 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		4E1C5EA726AA17DA0055ABA3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ../../../../Francois_Lunick_Beta/ProfileViewController.swift; sourceTree = "<group>"; };
 		4E75D5FE26940D7D0098A791 /* LetsChatBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsChatBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E75D60A26940D7F0098A791 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4E75D60F26940D7F0098A791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77B6785364CB3BB2D8BDDFC8 /* Pods_LetsChatBeta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetsChatBeta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D07A55AC7C39C13384EEF23 /* Pods-LetsChatBeta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsChatBeta.debug.xcconfig"; path = "Target Support Files/Pods-LetsChatBeta/Pods-LetsChatBeta.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,10 +101,10 @@
 		4E1C5E3F26A9A15A0055ABA3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4E1C5E4026A9A15A0055ABA3 /* Message.swift */,
-				4E1C5E4126A9A15A0055ABA3 /* User.swift */,
 				4E1C5E4226A9A15A0055ABA3 /* AppDelegate.swift */,
 				4E1C5E4326A9A15A0055ABA3 /* SceneDelegate.swift */,
+				4E1C5E4026A9A15A0055ABA3 /* Message.swift */,
+				4E1C5E4126A9A15A0055ABA3 /* User.swift */,
 				4E1C5E4426A9A15A0055ABA3 /* NewMessageControllerDelegate.swift */,
 			);
 			name = Model;
@@ -125,12 +114,13 @@
 		4E1C5E4526A9A15A0055ABA3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4E1C5E4B26A9A15A0055ABA3 /* Authentication */,
 				4E1C5E4626A9A15A0055ABA3 /* ChatViewController.swift */,
 				4E1C5E4726A9A15A0055ABA3 /* FriendsViewController.swift */,
 				4E1C5E4826A9A15A0055ABA3 /* SignInSplashViewController.swift */,
 				4E1C5E4926A9A15A0055ABA3 /* ChatCollectionViewController.swift */,
 				4E1C5E4A26A9A15A0055ABA3 /* NewMessageViewController.swift */,
-				4E1C5E4B26A9A15A0055ABA3 /* Authentication */,
+				4E1C5EA726AA17DA0055ABA3 /* ProfileViewController.swift */,
 			);
 			name = Controller;
 			path = ../../../Francois_Lunick_Alpha/LetsChatAlpha/LetsChatAlpha/Controller;
@@ -177,25 +167,6 @@
 			path = ../../../Francois_Lunick_Alpha/LetsChatAlpha/LetsChatAlpha/ViewModel;
 			sourceTree = "<group>";
 		};
-		4E1C5E7326A9A8670055ABA3 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				4E1C5E7B26A9A8930055ABA3 /* Roboto-Black.ttf */,
-				4E1C5E7D26A9A8940055ABA3 /* Roboto-BlackItalic.ttf */,
-				4E1C5E7926A9A8920055ABA3 /* Roboto-Bold.ttf */,
-				4E1C5E7C26A9A8930055ABA3 /* Roboto-BoldItalic.ttf */,
-				4E1C5E7A26A9A8930055ABA3 /* Roboto-Italic.ttf */,
-				4E1C5E7426A9A8910055ABA3 /* Roboto-Light.ttf */,
-				4E1C5E7626A9A8910055ABA3 /* Roboto-LightItalic.ttf */,
-				4E1C5E7E26A9A8940055ABA3 /* Roboto-Medium.ttf */,
-				4E1C5E7726A9A8920055ABA3 /* Roboto-MediumItalic.ttf */,
-				4E1C5E7F26A9A8940055ABA3 /* Roboto-Regular.ttf */,
-				4E1C5E7826A9A8920055ABA3 /* Roboto-Thin.ttf */,
-				4E1C5E7526A9A8910055ABA3 /* Roboto-ThinItalic.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		4E75D5F526940D7D0098A791 = {
 			isa = PBXGroup;
 			children = (
@@ -223,9 +194,7 @@
 				4E1C5E4526A9A15A0055ABA3 /* Controller */,
 				4E1C5E3C26A9A15A0055ABA3 /* API */,
 				4E1C5E4E26A9A15A0055ABA3 /* Utilities */,
-				4E1C5E7326A9A8670055ABA3 /* Fonts */,
 				4E75D60A26940D7F0098A791 /* Assets.xcassets */,
-				4E75D60F26940D7F0098A791 /* Info.plist */,
 				4E1C5E7126A9A4140055ABA3 /* GoogleService-Info.plist */,
 			);
 			path = LetsChatBeta;
@@ -372,6 +341,7 @@
 				4E1C5E6B26A9A15A0055ABA3 /* CustomInputAccessoryView.swift in Sources */,
 				4E1C5E6126A9A15A0055ABA3 /* NewMessageControllerDelegate.swift in Sources */,
 				4E1C5E5E26A9A15A0055ABA3 /* User.swift in Sources */,
+				4E1C5EA826AA17DA0055ABA3 /* ProfileViewController.swift in Sources */,
 				4E1C5E6926A9A15A0055ABA3 /* Constants.swift in Sources */,
 				4E1C5E7026A9A15A0055ABA3 /* MessageViewModel.swift in Sources */,
 			);

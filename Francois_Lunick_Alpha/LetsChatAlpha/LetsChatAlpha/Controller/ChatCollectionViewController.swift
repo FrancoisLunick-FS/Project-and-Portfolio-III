@@ -31,13 +31,12 @@ class ChatCollectionViewController: UICollectionViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
-//        let chatNavigationController = UINavigationController(rootViewController: ChatCollectionViewController)
+//        let rootViewController = ChatCollectionViewController()
+//        let chatNavigationController = UINavigationController(rootViewController: rootViewController)
         
-        //print(user.name)
-        navigationController?.title = user.name
-        navigationController?.navigationBar.tintColor = .black
-        //navigationController?.navigationBar.isTranslucent = true
-        //navigationController?.navigationBar.prefersLargeTitles = true
+        //navigationItem.titleView = UIImageView(image: UIImage(systemName: "person.circle.fill"))
+        navigationItem.title = user.name
+        //chatNavigationController.navigationItem.title = "User"
         
 
         // Register cell classes

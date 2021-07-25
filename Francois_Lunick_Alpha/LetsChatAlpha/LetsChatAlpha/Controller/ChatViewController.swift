@@ -131,11 +131,19 @@ extension ChatViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? ChatTableViewCell else {
+            
+            return tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        }
         
-        cell.textLabel?.text = conversations[indexPath.row].message.text
+        cell.nameLabel.text = conversations[indexPath.row].user.name
+        cell.messageLabel.text = conversations[indexPath.row].message.text
         
-        //cell.textLabel?.text = "text"
+        let date = conversations[indexPath.row].message.timestamp.dateValue()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm a"
+        
+        cell.timeLabel.text = dateFormatter.string(from: date)
         
         return cell
     }

@@ -74,7 +74,7 @@ class ChatViewController: UIViewController {
 //        }
         
         DispatchQueue.main.async {
-            self.performSegue(withIdentifier: "ToSignUpSplash", sender: self)
+            self.performSegue(withIdentifier: "ToSignUp", sender: self)
         }
     }
     
@@ -96,14 +96,14 @@ class ChatViewController: UIViewController {
         }
     }
     
-    func logout() {
-        do {
-            try Auth.auth().signOut()
-            presentLoginScreen()
-        } catch {
-            print("DEBUG: Error signing out..")
-        }
-    }
+//    func logout() {
+//        do {
+//            try Auth.auth().signOut()
+//            presentLoginScreen()
+//        } catch {
+//            print("DEBUG: Error signing out..")
+//        }
+//    }
     
     // MARK: - Actions
     @IBAction func presentNewMessage(_ sender: UIBarButtonItem) {
@@ -115,11 +115,6 @@ class ChatViewController: UIViewController {
         
         performSegue(withIdentifier: "ToNewMessage", sender: self)
     }
-    
-    @IBAction func exitScreen(_ sender: UIBarButtonItem) {
-        logout()
-    }
-    
 }
 
 // MARK: - UITableViewDataSource

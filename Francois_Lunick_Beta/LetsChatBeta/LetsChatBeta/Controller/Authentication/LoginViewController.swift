@@ -65,6 +65,12 @@ class LoginViewController: UIViewController {
 //        }
     }
     
+    @IBAction func dismissScreen(_ sender: UIButton) {
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
 
     /*
     // MARK: - Navigation

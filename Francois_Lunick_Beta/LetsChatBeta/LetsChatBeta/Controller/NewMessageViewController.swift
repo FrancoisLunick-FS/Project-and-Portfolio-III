@@ -13,7 +13,10 @@ class NewMessageViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var users = [User]()
+    private var filteredUsers = [User]()
     weak var delegate: NewMessageControllerDelegate?
+    
+    private let searchController = UISearchController(searchResultsController: nil)
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -31,13 +34,31 @@ class NewMessageViewController: UIViewController {
         tableView.rowHeight = 80
         
         configureNavigationBar()
+        configureSearchController()
     }
     
     func configureNavigationBar() {
         
+        navigationItem.title = "New Message"
         navigationController?.navigationBar.prefersLargeTitles = false
-        navigationController?.title = "New Message"
         navigationController?.navigationBar.tintColor = .black
+    }
+    
+    func configureSearchController() {
+        
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.showsCancelButton = false
+        navigationItem.searchController = searchController
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.placeholder = "Search for user"
+        definesPresentationContext = false
+        
+        if let textField = searchController.searchBar.value(forKey: "searchField") as? UITextField {
+            
+            textField.textColor = .black
+            textField.backgroundColor = .white
+        }
     }
     
     // MARK: - API
@@ -100,4 +121,19 @@ extension NewMessageViewController: UITableViewDelegate {
         
         //delegate?.controller(self, user: users[indexPath.row])
     }
+}
+
+extension NewMessageViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        guard let searchText = searchController.searchBar.text?.lowercased() else { return }
+        
+        filteredUsers = users.filter({ user in
+            
+            return user.name.contains(searchText)
+        })
+    }
+    
+    
 }
